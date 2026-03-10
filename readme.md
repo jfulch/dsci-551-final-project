@@ -59,6 +59,6 @@ https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
 Analyze DuckDB internals with a focus on:
 - Columnar storage (column pruning, segments/row groups).
 - Vectorized query execution (DataChunks, operator pipeline).
-- CSV ingestion (read_csv_auto) and how data is loaded into DuckDB’s internal format.[file:65][web:13][web:18][web:22]
+- CSV ingestion (read_csv_auto) and how data is loaded into DuckDB’s internal format.
 
-Build a small but functional dashboard and explain, for each key feature, what the app does, what DuckDB does internally, and why that matters for performance and behavior.[file:66]
+Build a small but functional dashboard and explain, for each key feature, what the app does, what DuckDB does internally, and why that matters for performance and behavior.
