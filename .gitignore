@@ -1,0 +1,13 @@
+.venv/
+.env
+
+# DuckDB binary file (generated at runtime from CSV)
+data/*.duckdb
+data/*.duckdb.wal
+
+# The large CSV (downloaded separately)
+data/*.csv
+
+# Python cache
+__pycache__/
+*.pyc

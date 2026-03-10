@@ -1,0 +1,6 @@
+# Place the Kaggle clickstream CSV here before running the app.
+#
+# Filename expected: "e-shop clothing 2008.csv"
+# Download from: https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
+#
+# The .duckdb file will also be generated here on first run.

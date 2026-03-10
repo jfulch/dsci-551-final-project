@@ -40,19 +40,44 @@ https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
    ```bash
    python -m venv .venv
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
 
 2. Install dependencies:
 
    ```bash
-    pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 
-3. Download the Kaggle clickstream CSV into the data/ folder (or update db.py to point to the correct path).
+3. Download the Kaggle clickstream CSV and place it in `data/`:
+
+   - File must be named **`e-shop clothing 2008.csv`** (the default Kaggle filename).
+   - Download from: https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
+   - Or via the Kaggle CLI (recommended):
+
+     ```bash
+     # Install the Kaggle CLI if you don't have it
+     pip install kaggle
+
+     # Place your API token at ~/.kaggle/kaggle.json
+     # (Kaggle account → Settings → API → Create New Token)
+
+     # Download and unzip directly into data/
+     kaggle datasets download tunguz/clickstream-data-for-online-shopping --unzip -p data/
+     ```
 
 4. Run the Streamlit app:
 
    ```bash
    streamlit run app.py
+   ```
+
+   On first launch DuckDB will ingest the CSV into `data/clickstream.duckdb` automatically.
+   Subsequent launches reuse the `.duckdb` file directly.
+
+5. (Optional) Test the backend only:
+
+   ```bash
+   python db.py
    ```
 
 ## Project goals (course)
