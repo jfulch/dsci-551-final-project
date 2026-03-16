@@ -220,7 +220,7 @@ elif page == "🌍 Geographic Analysis":
         )
 
         st.divider()
-        st.subheader("Summary (displayed)")
+        st.subheader("Activity Summary")
         # placeholders
         total_clicks_placeholder = st.empty()
         unique_sessions_placeholder = st.empty()
