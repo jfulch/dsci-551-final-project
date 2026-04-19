@@ -127,7 +127,7 @@ elif page == "🏷️ Product Performance":
         "DuckDB scans only `main_category`, `clothing_model`, `price` column segments."
     )
 
-    top_n_cat  = st.slider("Top N categories", 5, 20, 10)
+    top_n_cat  = st.slider("Top N categories", 1, 10, 4)
     top_n_prod = st.slider("Top N products",   5, 30, 15)
 
     df_cat  = load_categories(top_n_cat)
