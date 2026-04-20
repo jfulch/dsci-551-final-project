@@ -114,13 +114,6 @@ For each major dashboard operation the code documents: what the app does, what D
 - Internals mapping comments in every query function in `db.py`
 - Dataset, source code, and run instructions ready for TA/instructor review
 
-### Still needed (before demo -- 4/20)
-
-1. **Runtime CSV upload** -- The proposal stated users can load new CSV data at runtime to demonstrate `read_csv_auto`. Need a file-upload widget on the Internals page that ingests an uploaded CSV into a temporary DuckDB table.
-
-2. **CSV-direct vs. DuckDB-table benchmark** -- Need a section that runs the same query against (a) the raw CSV via `read_csv_auto` and (b) the persisted columnar table, side-by-side with timing, to visibly demonstrate the columnar storage speedup.
-
-3. **Standalone setup script** -- The professor's rubric requires a separate "database schema / setup scripts" artifact. An `init_db.py` that a TA can run independently to ingest the CSV without launching the full Streamlit app.
 
 ### Final report -- due 5/8 (10-12 pages for a group of 3)
 
