@@ -1,18 +1,3 @@
-"""
-db.py — DuckDB backend for the Clickstream Dashboard.
-
-Responsibilities (Jesse Fulcher):
-  - Open / reuse the DuckDB connection (in-process, file-backed).
-  - Ingest the Kaggle clickstream CSV and persist it as a columnar table.
-  - Expose typed query functions that the Streamlit app calls directly.
-
-Dataset columns (e-shop clothing 2008):
-  year, month, day, order, country, session_id,
-  page_1_main_category, page_2_clothing_model,
-  colour, location, model_photography,
-  price, price_2, page
-"""
-
 import os
 import duckdb
 import pandas as pd

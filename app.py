@@ -1,10 +1,3 @@
-"""
-app.py — Streamlit dashboard for the Clickstream Customer Insights app.
-
-Frontend responsibilities (Vivian Tran): charts, layout, styling.
-Backend wired here via db.py (Jesse Fulcher).
-"""
-
 import streamlit as st
 import plotly.express as px
 import pandas as pd
