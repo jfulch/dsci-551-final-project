@@ -429,7 +429,7 @@ elif page == "🔬 DuckDB Internals":
     st.title("🔬 DuckDB Internals Explorer")
     st.caption(
         "Run EXPLAIN or EXPLAIN ANALYZE on any query to see DuckDB's physical plan "
-        "and operator pipeline — useful for the final report."
+        "and operator pipeline."
     )
 
     default_sql = (
