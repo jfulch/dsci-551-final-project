@@ -26,7 +26,7 @@ https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
 ├── db.py               # DuckDB connection, ingestion, and query functions
 ├── requirements.txt    # Python dependencies
 ├── data/
-│   ├── e-shop clothing 2008.csv   # Kaggle dataset (downloaded separately)
+│   ├── e-shop clothing 2008.csv   # Kaggle dataset (included in repo)
 │   └── clickstream.duckdb         # Generated on first run -- do not commit
 └── documentation/      # PDFs: project proposal and professor guidelines
 ```
@@ -111,27 +111,3 @@ Analyze DuckDB internals with a focus on:
 
 For each major dashboard operation the code documents: what the app does, what DuckDB does internally, and why that matters for performance.
 
----
-
-## Implementation status
-
-### Done
-
-- DuckDB connection, CSV ingestion via `read_csv_auto`, persistent `.duckdb` file
-- All 5 business questions answered as interactive Streamlit pages
-- `EXPLAIN` / `EXPLAIN ANALYZE` explorer on the DuckDB Internals page
-- Internals mapping comments in every query function in `db.py`
-- Dataset, source code, and run instructions ready for TA/instructor review
-
-
-### Final report -- due 5/8 (10-12 pages for a group of 3)
-
-Required sections:
-- Introduction & Motivation
-- DuckDB System Overview
-- Internal Architecture (columnar storage, vectorized execution, CSV ingestion)
-- Application Design
-- Mapping Internals to Application Behavior (most heavily weighted)
-- Comparison with MySQL and MongoDB
-- Limitations & Lessons Learned
-- Link to Google Drive with all code and documentation
