@@ -5,9 +5,6 @@
 data/*.duckdb
 data/*.duckdb.wal
 
-# The large CSV (downloaded separately)
-data/*.csv
-
 # Python cache
 __pycache__/
 *.pyc

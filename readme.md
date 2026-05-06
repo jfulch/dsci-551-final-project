@@ -42,6 +42,20 @@ https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
 | Category Depth | Which categories do users explore deepest? |
 | DuckDB Internals | Run EXPLAIN / EXPLAIN ANALYZE on any SQL query |
 
+## Credentials / API Keys
+
+**No API keys or credentials are required to run this application.**
+
+The dataset can be downloaded manually (no account required) from the Kaggle link in the Dataset section above.
+
+The optional Kaggle CLI download method requires a Kaggle API token:
+- Obtain it at: Kaggle → Account Settings → API → **Create New Token** (downloads `kaggle.json`)
+- Place the file at `~/.kaggle/kaggle.json` (macOS/Linux) or `%USERPROFILE%\.kaggle\kaggle.json` (Windows)
+- Set permissions: `chmod 600 ~/.kaggle/kaggle.json`
+- **Do not commit this file to the repository** — it contains your personal API credentials
+
+If you prefer not to use the CLI, skip the Kaggle token entirely and download the CSV manually (see Setup step 3).
+
 ## Setup
 
 1. Clone the repo and create a virtual environment:
@@ -57,20 +71,15 @@ https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
    pip install -r requirements.txt
    ```
 
-3. Download the Kaggle clickstream CSV and place it in `data/`:
+3. The dataset is included in the repository (`data/e-shop clothing 2008.csv`) — no separate download needed.
 
-   - File must be named **`e-shop clothing 2008.csv`** (the default Kaggle filename).
-   - Download from: https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
-   - Or via the Kaggle CLI (recommended):
+   If the file is missing for any reason, download it manually:
+   - From: https://www.kaggle.com/datasets/tunguz/clickstream-data-for-online-shopping
+   - File must be named **`e-shop clothing 2008.csv`** and placed in the `data/` folder.
+   - Or via the Kaggle CLI (requires API token — see Credentials section above):
 
      ```bash
-     # Install the Kaggle CLI
      pip install kaggle
-
-     # Place your API token at ~/.kaggle/kaggle.json
-     # (Kaggle account -> Settings -> API -> Create New Token)
-
-     # Download and unzip directly into data/
      kaggle datasets download tunguz/clickstream-data-for-online-shopping --unzip -p data/
      ```
 
